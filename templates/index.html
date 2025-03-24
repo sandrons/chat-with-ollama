@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chat with Uploaded Text</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Upload a Text File & Chat with AI</h1>
+        
+        <input type="file" id="fileInput">
+        <button onclick="uploadFile()">Upload</button>
+
+        <h2>File Content</h2>
+        <div id="fileContent"></div>
+
+        <h2>Chat with AI</h2>
+        <div id="chatbox"></div>
+        <input type="text" id="userInput" placeholder="Type a message...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
